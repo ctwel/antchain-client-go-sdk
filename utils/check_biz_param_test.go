@@ -2,7 +2,7 @@ package utils
 
 import (
 	"github.com/stretchr/testify/require"
-	"gitlab.alipay-inc.com/antchain/restclient-go-sdk/model"
+	"github.com/ctwel/antchain-client-go-sdk/model"
 	"testing"
 )
 

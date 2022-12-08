@@ -7,6 +7,6 @@ import (
 )
 
 func TestSign(t *testing.T) {
-	_, err := Sign("hello", os.Getenv("GOPATH") + "/src/gitlab.alipay-inc.com/antchain/restclient-go-sdk/test/access.key")
+	_, err := Sign("hello", os.Getenv("GOPATH") + "/src/github.com/ctwel/antchain-client-go-sdk/test/access.key")
 	require.Truef(t,err == nil,"sign text failed,err:%+v",err)
 }

@@ -92,7 +92,7 @@ const abiJsonStr = `[
 ]`
 
 func TestNewRestClient(t *testing.T) {
-	configFilePath := os.Getenv("GOPATH") + "/src/gitlab.alipay-inc.com/antchain/restclient-go-sdk/test/rest-config.json"
+	configFilePath := os.Getenv("GOPATH") + "/src/github.com/ctwel/antchain-client-go-sdk/test/rest-config.json"
 	restClient, err := NewRestClient(configFilePath)
 	if err != nil {
 		t.Errorf("failed to NewRestClient err:%+v", err)
@@ -108,25 +108,25 @@ func TestNewRestClient_WrongConfigPath(t *testing.T) {
 }
 
 func TestNewRestClient_WrongConfigFile(t *testing.T) {
-	configFilePath := os.Getenv("GOPATH") + "/src/gitlab.alipay-inc.com/antchain/restclient-go-sdk/test/rest-config-wrong.json"
+	configFilePath := os.Getenv("GOPATH") + "/src/github.com/ctwel/antchain-client-go-sdk/test/rest-config-wrong.json"
 	_, err := NewRestClient(configFilePath)
 	require.Truef(t, err != nil, "cannot new restclient without right config file")
 }
 
 func TestNewRestClient_WrongAccessKey1(t *testing.T) {
-	configFilePath := os.Getenv("GOPATH") + "/src/gitlab.alipay-inc.com/antchain/restclient-go-sdk/test/rest-config-wrong-access-key1.json"
+	configFilePath := os.Getenv("GOPATH") + "/src/github.com/ctwel/antchain-client-go-sdk/test/rest-config-wrong-access-key1.json"
 	_, err := NewRestClient(configFilePath)
 	require.Truef(t, err != nil, "cannot new restclient without right access key")
 }
 
 func TestNewRestClient_WrongAccessKey2(t *testing.T) {
-	configFilePath := os.Getenv("GOPATH") + "/src/gitlab.alipay-inc.com/antchain/restclient-go-sdk/test/rest-config-wrong-access-key2.json"
+	configFilePath := os.Getenv("GOPATH") + "/src/github.com/ctwel/antchain-client-go-sdk/test/rest-config-wrong-access-key2.json"
 	_, err := NewRestClient(configFilePath)
 	require.Truef(t, err != nil, "cannot new restclient without right access key")
 }
 
 func TestDeposit(t *testing.T) {
-	configFilePath := os.Getenv("GOPATH") + "/src/gitlab.alipay-inc.com/antchain/restclient-go-sdk/test/rest-config.json"
+	configFilePath := os.Getenv("GOPATH") + "/src/github.com/ctwel/antchain-client-go-sdk/test/rest-config.json"
 	restClient, err := NewRestClient(configFilePath)
 	if err != nil {
 		t.Errorf("failed to NewRestClient err:%+v", err)
@@ -165,7 +165,7 @@ func TestDeposit(t *testing.T) {
 }
 
 func TestQueryTransaction(t *testing.T) {
-	configFilePath := os.Getenv("GOPATH") + "/src/gitlab.alipay-inc.com/antchain/restclient-go-sdk/test/rest-config.json"
+	configFilePath := os.Getenv("GOPATH") + "/src/github.com/ctwel/antchain-client-go-sdk/test/rest-config.json"
 	restClient, err := NewRestClient(configFilePath)
 	if err != nil {
 		t.Errorf("failed to NewRestClient err:%+v", err)
@@ -177,7 +177,7 @@ func TestQueryTransaction(t *testing.T) {
 }
 
 func TestQueryReceipt(t *testing.T) {
-	configFilePath := os.Getenv("GOPATH") + "/src/gitlab.alipay-inc.com/antchain/restclient-go-sdk/test/rest-config.json"
+	configFilePath := os.Getenv("GOPATH") + "/src/github.com/ctwel/antchain-client-go-sdk/test/rest-config.json"
 	restClient, err := NewRestClient(configFilePath)
 	if err != nil {
 		t.Errorf("failed to NewRestClient err:%+v", err)
@@ -263,7 +263,7 @@ func TestQueryReceipt(t *testing.T) {
 ]
 */
 func TestDeployContractAndCallContract(t *testing.T) {
-	configFilePath := os.Getenv("GOPATH") + "/src/gitlab.alipay-inc.com/antchain/restclient-go-sdk/test/rest-config.json"
+	configFilePath := os.Getenv("GOPATH") + "/src/github.com/ctwel/antchain-client-go-sdk/test/rest-config.json"
 	restClient, err := NewRestClient(configFilePath)
 	if err != nil {
 		t.Errorf("failed to NewRestClient err:%+v", err)
@@ -343,7 +343,7 @@ func TestDeployContractAndCallContract(t *testing.T) {
 }
 
 func TestDepositSyncWithTransaction(t *testing.T) {
-	configFilePath := os.Getenv("GOPATH") + "/src/gitlab.alipay-inc.com/antchain/restclient-go-sdk/test/rest-config.json"
+	configFilePath := os.Getenv("GOPATH") + "/src/github.com/ctwel/antchain-client-go-sdk/test/rest-config.json"
 	restClient, err := NewRestClient(configFilePath)
 	if err != nil {
 		t.Errorf("failed to NewRestClient err:%+v", err)
@@ -370,7 +370,7 @@ func TestDepositSyncWithTransaction(t *testing.T) {
 }
 
 func TestCreateAndQueryAccountWithKmsIdAndDeposit(t *testing.T) {
-	configFilePath := os.Getenv("GOPATH") + "/src/gitlab.alipay-inc.com/antchain/restclient-go-sdk/test/rest-config.json"
+	configFilePath := os.Getenv("GOPATH") + "/src/github.com/ctwel/antchain-client-go-sdk/test/rest-config.json"
 	restClient, err := NewRestClient(configFilePath)
 	if err != nil {
 		t.Errorf("failed to NewRestClient err:%+v", err)
@@ -420,7 +420,7 @@ func TestCreateAndQueryAccountWithKmsIdAndDeposit(t *testing.T) {
 }
 
 func TestCreateAndQueryAccountWithKmsIdAndDeployCallContract(t *testing.T) {
-	configFilePath := os.Getenv("GOPATH") + "/src/gitlab.alipay-inc.com/antchain/restclient-go-sdk/test/rest-config.json"
+	configFilePath := os.Getenv("GOPATH") + "/src/github.com/ctwel/antchain-client-go-sdk/test/rest-config.json"
 	restClient, err := NewRestClient(configFilePath)
 	if err != nil {
 		t.Errorf("failed to NewRestClient err:%+v", err)
@@ -488,7 +488,7 @@ func TestCreateAndQueryAccountWithKmsIdAndDeployCallContract(t *testing.T) {
 }
 
 func TestRestClient_MultipleQueryReceipt(t *testing.T) {
-	configFilePath := os.Getenv("GOPATH") + "/src/gitlab.alipay-inc.com/antchain/restclient-go-sdk/test/rest-config.json"
+	configFilePath := os.Getenv("GOPATH") + "/src/github.com/ctwel/antchain-client-go-sdk/test/rest-config.json"
 	restClient, err := NewRestClient(configFilePath)
 	if err != nil {
 		t.Errorf("failed to NewRestClient err:%+v", err)
