@@ -1,4 +1,4 @@
-module gitlab.alipay-inc.com/antchain/restclient-go-sdk
+module github.com/ctwel/antchain-client-go-sdk
 
 go 1.12
 
